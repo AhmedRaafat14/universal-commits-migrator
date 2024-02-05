@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="docs/assets/style.css" />
+<link rel="stylesheet" href="docs/assets/css/style.scss" />
 
 <figure>
   <img class="thumbnail" src="docs/assets/logo.jpg" alt="Universal Commits Migrator (UCM)">
