@@ -11,6 +11,8 @@ This tool is designed to migrate your commit history from source control managem
 
 ⭐ Don't forget to give the project a star! Thanks again! ⭐
 
+You can find the official docs of this tool [here](https://ahmedraafat14.github.io/universal-commits-migrator/).
+
 This tool will transform your GitHub contribution chart like the following:
 
 <figure>

@@ -42,6 +42,6 @@ If you encounter any issues or have any questions, the [Troubleshooting](./troub
 
 ## Contributions
 
-Contributions to this project are welcome! If you have suggestions for improvements or encounter any issues, please feel free to open an issue or submit a pull request. For more information on contributing, check out our [Contribution Guide](./contributing/contributing.md).
+Contributions to this project are welcome! If you have suggestions for improvements or encounter any issues, please feel free to open an issue or submit a pull request. For more information on contributing, check out our [Contribution](./contributing/contributing.md) Guide.
 
 Thank you for using the Universal Commits Migrator (UCM)! We hope this tool helps you showcase your contributions effectively on your GitHub profile.
