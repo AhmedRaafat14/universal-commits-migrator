@@ -18,6 +18,7 @@ Configure the following variables related to GitLab:
 
 - `GITLAB_API_URL`: Set this to your GitLab instance's API URL. For GitLab.com users, this will be `https://gitlab.com/api/v4`.
 - `GITLAB_TOKEN`: Your personal access token from GitLab with `read_api` scope. [Create a GitLab access token](https://gitlab.com/-/profile/personal_access_tokens).
+- `GITLAB_USERNAME`: (Optional) Your GitLab username to fetch only commits authered by you.
 - `CONTRIBUTED_PROJECTS`: (Optional) A comma-separated list of project IDs you want to fetch commits from. If left empty, the tool will fetch commits from all projects you have access to.
 
 Example:
