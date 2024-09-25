@@ -13,6 +13,7 @@ import (
 
 var (
 	gitlabToken         string
+	gitlabUsername      string
 	gitlabApiUrl        string
 	contributedProjects string
 )
@@ -24,6 +25,7 @@ func init() {
 	}
 
 	gitlabToken = os.Getenv("GITLAB_TOKEN")
+	gitlabUsername = os.Getenv("GITLAB_USERNAME")
 	gitlabApiUrl = os.Getenv("GITLAB_API_URL")
 	contributedProjects = os.Getenv("CONTRIBUTED_PROJECTS")
 }
@@ -76,14 +78,14 @@ func FetchProjects() ([]gitlab.Project, error) {
 
 func FetchCommitsForProject(projectID int) ([]gitlab.Commit, error) {
 	var allCommits []gitlab.Commit
-	baseURL := fmt.Sprintf("%s/projects/%d/repository/commits", gitlabApiUrl, projectID)
+	baseURL := fmt.Sprintf("%s/projects/%d/repository/commits?author=%s", gitlabApiUrl, projectID, gitlabUsername)
 
 	// Start fetching from the first page
 	page := 1
 	perPage := 100 // Adjust per_page to your preference
 
 	for {
-		url := fmt.Sprintf("%s?page=%d&per_page=%d", baseURL, page, perPage)
+		url := fmt.Sprintf("%s&page=%d&per_page=%d", baseURL, page, perPage)
 		request, err := http.NewRequest("GET", url, nil)
 		if err != nil {
 			return nil, err

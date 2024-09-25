@@ -63,6 +63,7 @@ These instructions will guide you through the setup and execution of the Univers
    GITLAB_API_URL=https://gitlab.yourdomain.io/api/v4
    CONTRIBUTED_PROJECTS=123,456 # Optional: Specify project IDs to fetch commits from, separated by commas.
    GITLAB_TOKEN=your_gitlab_token
+   GITLAB_USERNAME=your_gitlab_username
 
    # GitHub Configuration
    GITHUB_API_URL=https://api.github.com/repos/your_username/your_repo
