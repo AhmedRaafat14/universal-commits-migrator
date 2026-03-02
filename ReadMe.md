@@ -24,7 +24,7 @@ This tool will transform your GitHub contribution chart like the following:
 
 ## Features
 
-- **Multiple Source Support**: Retrieve your commit history from various source control providers like GitLab or Bitbucket.
+- **Multiple Source Support**: Retrieve your commit history from various source control providers like GitLab, GitHub, or Bitbucket.
 - **Create Empty Commits**: Push empty commits to a designated GitHub repository with the original commit timestamps, allowing you to visualize your contribution activity on GitHub.
 - **Incremental Updates**: Only new commits since the last run are pushed, avoiding duplicates and saving time.
 - **Log Output**: Detailed logs for each operation, making it easy to track and troubleshoot the process.
@@ -59,22 +59,27 @@ These instructions will guide you through the setup and execution of the Univers
 3. **Configure Environment Variables**: Rename the provided `.env.example` to `.env` and fill in your details:
 
    ```plaintext
-   # GitLab Configuration
+   # GitLab Configuration (when SOURCE=gitlab)
    GITLAB_API_URL=https://gitlab.yourdomain.io/api/v4
    CONTRIBUTED_PROJECTS=123,456 # Optional: Specify project IDs to fetch commits from, separated by commas.
    GITLAB_TOKEN=your_gitlab_token
    GITLAB_USERNAME=your_gitlab_username
 
-   # GitHub Configuration
+   # GitHub Source Configuration (when SOURCE=github)
+   SOURCE_GITHUB_TOKEN=your_source_github_token
+   SOURCE_GITHUB_USERNAME=your_source_github_username
+   SOURCE_GITHUB_API_URL=https://api.github.com # Optional: defaults to https://api.github.com
+
+   # GitHub Destination Configuration (when DESTINATION=github)
    GITHUB_API_URL=https://api.github.com/repos/your_username/your_repo
    GITHUB_API_VERSION=2022-11-28
    GITHUB_BRANCH_TO_COMMIT_TO=master # Default is master; change if needed.
    GITHUB_USERNAME=your_github_username
    GITHUB_EMAIL=your_email@domain.com
    GITHUB_TOKEN=your_github_token
-   
+
    # Tool sources and destinations
-   SOURCE=gitlab # Default is gitlab; change if needed.
+   SOURCE=gitlab # Supported: gitlab, github
    DESTINATION=github # Default is github; change if needed.
    ```
 

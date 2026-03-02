@@ -17,7 +17,8 @@ func main() {
 	switch os.Getenv("SOURCE") {
 	case "gitlab":
 		source = gitlab.NewGitLabSource()
-	// Add cases for other sources like bitbucket
+	case "github":
+		source = github.NewGitHubSource()
 	default:
 		logger.Log.Fatalf("Unsupported source")
 	}
